@@ -4,7 +4,19 @@ import * as Sentry from "@sentry/node";
 import "dotenv/config";
 import errorHandler from "./middleware/errorHandler.js";
 import contentRouter from "../routes/content.js";
+import aboutRouter from "../routes/about.js";
 import log from "./middleware/logMiddleware.js";
+import pkg from "pg";
+import { PrismaPg } from "@prisma/adapter-pg";
+import { PrismaClient } from "@prisma/client";
+import cors from "cors";
+
+const { Pool } = pkg;
+const connectionString = `${process.env.DATABASE_URL}`;
+
+const pool = new Pool({ connectionString });
+const adapter = new PrismaPg(pool);
+const prisma = new PrismaClient({ adapter });
 
 const app = express();
 
@@ -32,12 +44,18 @@ app.use(Sentry.Handlers.tracingHandler());
 app.use(express.json());
 app.use(log);
 
-app.get("/", (req, res) => {
-  res.send("MY WEB APP");
-});
+// CORS middleware configuration
+const corsOptions = {
+  // origin: "https://eventsmanagementapp.netlify.app",
+  origin: "http://localhost:3000 ",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+};
+app.use(cors(corsOptions));
 
 //Routes
 app.use("/content", contentRouter);
+app.use("/about", aboutRouter);
 
 // The error handler must be registered before any other error middleware and after all controllers
 app.use(Sentry.Handlers.errorHandler());
@@ -48,3 +66,5 @@ const port = process.env.POST || 3000;
 app.listen(3000, () => {
   console.log(`Server is listening on port ${port}`);
 });
+
+export default prisma;
