@@ -1,0 +1,44 @@
+{
+  "skills": [
+    {
+      "id": "1",
+      "title": "HTML5",
+      "logo": "https://i.ibb.co/kqtwCdL/html-logo-800.png"
+    },
+    {
+      "id": "2",
+      "title": "CSS",
+      "logo": "https://i.ibb.co/Nn7dWx2/css-logo.png"
+    },
+    {
+      "id": "3",
+      "title": "ChakraUI",
+      "logo": "https://i.ibb.co/rtN2TKx/chakra-logo.png"
+    },
+    {
+      "id": "4",
+      "title": "JavaScript",
+      "logo": "https://i.ibb.co/4tksVgB/js-logo.png"
+    },
+    {
+      "id": "5",
+      "title": "React",
+      "logo": "https://i.ibb.co/vHzrMTg/react-logo.png"
+    },
+    {
+      "id": "6",
+      "title": "Node.js",
+      "logo": "https://i.ibb.co/hZMHKZb/new-node-logo.png"
+    },
+    {
+      "id": "7",
+      "title": "MySQL",
+      "logo": "https://i.ibb.co/fDNQYbp/mysql-logo.png"
+    },
+    {
+      "id": "8",
+      "title": "Prisma",
+      "logo": "https://i.ibb.co/XLjmQvT/prisma-logo.png"
+    }
+  ]
+}
