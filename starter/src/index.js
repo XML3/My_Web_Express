@@ -1,11 +1,15 @@
 import express from "express";
 import * as Sentry from "@sentry/node";
-import errorHandler from "./middleware/errorHandler";
+
+import "dotenv/config";
+import errorHandler from "./middleware/errorHandler.js";
 import contentRouter from "../routes/content.js";
+import log from "./middleware/logMiddleware.js";
 
 const app = express();
 
 //Sentry
+
 Sentry.init({
   dsn: process.env.SENTRY_DSN,
   integrations: [
