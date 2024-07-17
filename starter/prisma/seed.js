@@ -4,7 +4,7 @@ import aboutData from "../src/data/about.json" assert { type: "json" };
 import portData from "../src/data/port.json" assert { type: "json" };
 import skillData from "../src/data/skills.json" assert { type: "json" };
 
-const prisma = new PrismaClient({ log: ["query,", "info", "warn", "error"] });
+const prisma = new PrismaClient({ log: ["query", "info", "warn", "error"] });
 
 async function main() {
   const { content } = contentData;
