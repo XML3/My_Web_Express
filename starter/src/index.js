@@ -7,12 +7,12 @@ import contentRouter from "../routes/content.js";
 import aboutRouter from "../routes/about.js";
 import portRouter from "../routes/port.js";
 import skillsRouter from "../routes/skills.js";
+import contactRouter from "../routes/contact.js";
 import log from "./middleware/logMiddleware.js";
 import pkg from "pg";
 import { PrismaPg } from "@prisma/adapter-pg";
 import { PrismaClient } from "@prisma/client";
 import cors from "cors";
-import getSkills from "./services/skills.js";
 
 const { Pool } = pkg;
 const connectionString = `${process.env.DATABASE_URL}`;
@@ -62,6 +62,7 @@ app.use("/content", contentRouter);
 app.use("/about", aboutRouter);
 app.use("/port", portRouter);
 app.use("/skills", skillsRouter);
+app.use("/contact", contactRouter);
 
 // The error handler must be registered before any other error middleware and after all controllers
 app.use(Sentry.Handlers.errorHandler());
