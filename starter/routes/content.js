@@ -14,9 +14,9 @@ router.get("/", async (req, res, next) => {
 });
 
 //Get By Id
-router.get("/:id", async (res, req, next) => {
+router.get("/:id", async (req, res, next) => {
   try {
-    const { id } = reg.params;
+    const { id } = req.params;
     const content = await getContentById(id);
 
     if (!content) {
