@@ -5,6 +5,7 @@ import "dotenv/config";
 import errorHandler from "./middleware/errorHandler.js";
 import contentRouter from "../routes/content.js";
 import aboutRouter from "../routes/about.js";
+import portRouter from "../routes/port.js";
 import log from "./middleware/logMiddleware.js";
 import pkg from "pg";
 import { PrismaPg } from "@prisma/adapter-pg";
@@ -57,6 +58,7 @@ app.use(cors(corsOptions));
 //Routes
 app.use("/content", contentRouter);
 app.use("/about", aboutRouter);
+app.use("/port", portRouter);
 
 // The error handler must be registered before any other error middleware and after all controllers
 app.use(Sentry.Handlers.errorHandler());
