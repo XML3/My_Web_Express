@@ -17,7 +17,7 @@ datasource db {
 
 model Content {
   id      String  @id @default(uuid())
-  image   String
+  img     String
   title   String
   text    String  @db.VarChar(900)
   tools   String
