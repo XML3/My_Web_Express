@@ -14,12 +14,12 @@ router.get("/", async (req, res, next) => {
 });
 
 //Get By Id
-router.get("/:id", async(res, req, next) => {
+router.get("/:id", async (res, req, next) => {
   try {
-    const { id } = reg.params:
+    const { id } = reg.params;
     const content = await getContentById(id);
 
-    if(!content) {
+    if (!content) {
       res.status(404).send(`Content with id ${id} was not found`);
     } else {
       res.status(200).json(content);
