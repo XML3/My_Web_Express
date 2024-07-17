@@ -1,4 +1,5 @@
 import express from "express";
+import getAbout from "../src/services/about.js";
 
 const router = express.Router();
 
