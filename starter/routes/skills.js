@@ -1,4 +1,5 @@
 import express from "express";
+import getSkills from "../src/services/skills.js";
 
 const router = express.Router();
 
