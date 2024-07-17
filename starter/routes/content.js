@@ -1,4 +1,5 @@
 import express from "express";
+import getContent from "../src/services/content.js";
 
 const router = express.Router();
 
