@@ -5,7 +5,7 @@
   "type": "module",
   "main": "index.js",
   "prisma": {
-    "ssed": "node ./prisma/seed.js"
+    "seed": "node ./prisma/seed.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
