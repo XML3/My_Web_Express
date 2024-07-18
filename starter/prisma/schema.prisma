@@ -42,3 +42,11 @@ model Skills {
   title   String
   logo    String
 }
+
+model Contact {
+  id            Int  @id @default(autoincrement())
+  firstName     String
+  lastName      String
+  message       String @db.VarChar(2000)
+  createdAt     DateTime @default(now())
+}
