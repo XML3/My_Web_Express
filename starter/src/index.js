@@ -50,8 +50,8 @@ app.use(log);
 
 // CORS middleware configuration
 const corsOptions = {
-  // origin: "https://eventsmanagementapp.netlify.app",
-  origin: "http://localhost:3000 ",
+  origin: "https://xaglymontilva.com",
+  // origin: "http://localhost:3000 ",
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
 };
@@ -69,7 +69,7 @@ app.use(Sentry.Handlers.errorHandler());
 
 app.use(errorHandler);
 
-const port = process.env.POST || 4000;
+const port = process.env.POST || 3000;
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}`);
 });
