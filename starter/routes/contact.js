@@ -8,22 +8,26 @@ router.post("/", async (req, res, next) => {
   try {
     const { firstName, lastName, email, message } = req.body;
 
+    if (!firstName || !lastName || !email || !message) {
+      return res.status(400).json({
+        message:
+          "First Name, Last Name, Email, and Message are required fields",
+      });
+    }
+
     const newContact = await contactFormEntry(
       firstName,
       lastName,
       email,
       message
     );
-
-    if (!firstName || !lastName || !email || !message) {
-      res.status(400).json({
-        message: "First Name, Last Name, Email and Message are required fileds",
-      });
-    } else {
-      res.status(201).json(newContact);
-    }
+    res.status(201).json(newContact);
   } catch (error) {
-    next(error);
+    if (error.message === "A contact with this email already exists.") {
+      res.status(409).json({ message: error.message }); // 409 Conflict
+    } else {
+      next(error); // Pass other errors to the error handler middleware
+    }
   }
 });
 
