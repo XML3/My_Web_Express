@@ -35,7 +35,8 @@ model Port {
   id      String @id @default(uuid())
   title   String
   text    String @db.VarChar(900)
-  image   String
+  image   String?
+  link    String?
 }
 
 model Skills {

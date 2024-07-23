@@ -31,7 +31,12 @@ async function main() {
   for (const ports of port) {
     await prisma.port.upsert({
       where: { id: ports.id },
-      update: {},
+      update: {
+        title: ports.title,
+        text: ports.text,
+        image: ports.image,
+        link: ports.link,
+      },
       create: ports,
     });
   }
