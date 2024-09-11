@@ -7,7 +7,7 @@
       "text": "A simple Front-end React.js project which explores an array of recipes by searching with keywords, along with specific dietary preferences: [label, diet labels, cautions, and health labels]. The project incorporates color-coded sections on recipe cards to denote whether the recipe is Vegetarian or Vegan, as well as color labels highlighting cautions and dietary preferences.  A delightful culinary adventure, crafted to cater to dietary needs and preferences.",
       "tools": "React.js, ChakraUI, JSON",
       "link": "https://tastyrecipechecker.netlify.app/",
-      "front": "https://i.ibb.co/rM9zBmt/recipe-checker33.png"
+      "front": "https://i.ibb.co/zfS4GkH/recipe-checker-331.png"
     },
     {
       "id": "2",
