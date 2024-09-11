@@ -31,7 +31,7 @@
       "id": "4",
       "img": "https://i.ibb.co/5BLLmnS/link-img.png",
       "title": "Bookings Express API",
-      "text": "Back-end Express API project, has the functionality of a property booking system online. It manages users and hosts interaction with the platform to handle the create, view, update, and delete sections of the App for personal bookings or properties with an integrated secure authentication and authorization in order to verify user's identity and grant appropiate permissions and access.  Moreover, the API facilitates the rating of properties and the creation of reviews, allowing users to share their experiences and insights. Notably, the system dynamically calculates the average rating for each property, ensuring up-to-date and accurate feedback for users. ",
+      "text": "Back-end Express API project, with the functionality of a property booking system online. It manages users and hosts interaction with the platform to handle the create, view, update, and delete sections of the App for personal bookings or properties with an integrated secure authentication and authorization in order to verify user's identity and grant appropiate permissions and access.  Moreover, the API facilitates the rating of properties and the creation of reviews, allowing users to share their experiences and insights. Notably, the system dynamically calculates the average rating for each property, ensuring up-to-date and accurate feedback for users. ",
       "tools": "Node/Express.js, Prisma[MySQL], Sentry, AuthO",
       "link": "https://github.com/XML3/BED-Final-Project",
       "front": "https://i.ibb.co/8Pp88sd/bookings-api-33.png"
