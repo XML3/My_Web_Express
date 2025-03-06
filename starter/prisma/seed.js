@@ -12,10 +12,23 @@ async function main() {
   const { port } = portData;
   const { skills } = skillData;
 
+  // Clear existing data from the tables before inserting new data
+  await prisma.content.deleteMany({});
+  await prisma.about.deleteMany({});
+  await prisma.port.deleteMany({});
+  await prisma.skills.deleteMany({});
+
   for (const contents of content) {
     await prisma.content.upsert({
       where: { id: contents.id },
-      update: {},
+      update: {
+        img: contents.img,
+        title: contents.title,
+        text: contents.text,
+        tools: contents.tools,
+        link: contents.link,
+        front: contents.front,
+      },
       create: contents,
     });
   }
@@ -23,7 +36,7 @@ async function main() {
   for (const abouts of about) {
     await prisma.about.upsert({
       where: { id: abouts.id },
-      update: {},
+      update: { AboutMe: about.AboutMe },
       create: abouts,
     });
   }

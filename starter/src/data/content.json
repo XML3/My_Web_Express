@@ -13,10 +13,10 @@
       "id": "2",
       "img": "https://i.ibb.co/5BLLmnS/link-img.png",
       "title": "Events Management - Front-End",
-      "text": "Front-end React.js project, designed to simulate an event management system. It allows users to upload and manage events...",
+      "text": "Front-end React.js project, designed to simulate an event management system. It allows users to upload and manage events... [ This project will take a few moments to load! ]",
       "tools": "React.js, ChakraUI",
       "link": "https://eventsmanagementapp.netlify.app",
-      "front": "https://i.ibb.co/F6jvdh2/evets-management-333.png"
+      "front": "https://i.ibb.co/7Vw5wrL/new-events.png"
     },
     {
       "id": "3",
@@ -34,7 +34,7 @@
       "text": "This Back-end Express API project is the backbone of the Events management system. It manages the database, enabling posting, editing, and deletion of events...",
       "tools": "Node/Express.js, Prisma[PostgreSQL], Sentry, AuthO",
       "link": "https://github.com/XML3/BED-Express-Event-API",
-      "front": "https://i.ibb.co/7tnhv2s/events-management-331.png"
+      "front": "https://i.ibb.co/MhwHLhF/new-events-api.png"
     },
     {
       "id": "5",
