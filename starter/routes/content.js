@@ -7,6 +7,7 @@ const router = express.Router();
 router.get("/", async (req, res, next) => {
   try {
     const content = await getContent();
+    console.log("Fetched content:", content);
     res.status(200).json(content);
   } catch (error) {
     next(error);

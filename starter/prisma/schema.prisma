@@ -23,7 +23,7 @@ model Content {
   tools   String
   link    String
   front   String
-  readMore String
+  ReadMore String @default("https://github.com/XML3?tab=repositories")
 }
 
 model About {
