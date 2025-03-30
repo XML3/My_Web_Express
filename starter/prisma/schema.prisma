@@ -23,6 +23,7 @@ model Content {
   tools   String
   link    String
   front   String
+  readMore String
 }
 
 model About {

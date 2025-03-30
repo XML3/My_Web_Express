@@ -28,6 +28,7 @@ async function main() {
         tools: contents.tools,
         link: contents.link,
         front: contents.front,
+        readMore: contents.readMore,
       },
       create: contents,
     });
